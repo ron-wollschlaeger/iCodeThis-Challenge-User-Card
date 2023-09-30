@@ -159,8 +159,63 @@
     </button>
     <!-- Template END -->
 
-    <main class="p-4">
-      <header class="">
+    <div
+      id="modular"
+      class="absolute z-20 w-full h-full bg-gray-800/75 hidden justify-center items-center"
+    >
+      <div
+        class="relative w-full max-w-md bg-gray-50 flex flex-col items-center"
+      >
+        <button id="btn-modular_close" onclick="toggleModularClose()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-x absolute text-gray-50 right-2 top-2"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <img
+          src="https://images.unsplash.com/photo-1548585742-110f6e08f1aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt="Charles Bridge in Rom"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+          alt="Profile picture"
+          class="rounded-full w-40 h-40 object-cover -mt-20 mb-10 shadow-xl shadow-gray-600 border-gray-50 border-2"
+        />
+
+        <div class="flex flex-col gap-1 text-center mb-5">
+          <a href="#" id="openModal" class="hover:underline">
+            <h2 class="text-2xl font-semibold leading-none">Carrie Brewer</h2>
+          </a>
+          <span class="text-lg text-gray-500 leading-none">@carrie_brewer</span>
+        </div>
+
+        <button
+          id="btn-modular_follow"
+          onclick="toggleFollow2()"
+          class="text-lg border-2 px-4 py-1 rounded-full border-gray-800 bg-gray-800 text-gray-50 hover:bg-gray-500 hover:border-gray-500 hover:cursor-pointer font-semibold mb-10"
+        >
+          Follow
+        </button>
+      </div>
+    </div>
+
+    <main
+      class="w-full max-w-screen-sm bg-gray-50 dark:bg-gray-950 z-10 shadow-lg"
+    >
+      <header class="flex justify-between items-center p-8">
         <div class="flex gap-2">
           <img
             src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
@@ -168,24 +223,47 @@
             class="rounded-full w-10 h-10 object-cover"
           />
           <div class="flex flex-col gap-1">
-            <h2 class="text-xl leading-none">Carrie Brewer</h2>
-            <span class="text-xs leading-none">214 followers</span>
+            <a href="#" id="openModal" class="hover:underline">
+              <h2 class="text-xl font-semibold leading-none">Carrie Brewer</h2>
+            </a>
+            <span class="text-xs text-gray-500 leading-none"
+              >214 followers</span
+            >
           </div>
         </div>
 
-        <button class="border-2 border-gray-800 bg-white px-4 py-1 rounded-full">Follow</button>
+        <button
+          id="btn-follow"
+          onclick="toggleFollow()"
+          class="text-lg border-2 px-4 py-1 rounded-full border-gray-800 bg-gray-800 text-gray-50 hover:bg-gray-500 hover:border-gray-500 hover:cursor-pointer font-semibold"
+        >
+          Follow
+        </button>
       </header>
 
-      <div>
-        <img src="" alt="" />
-        <div>
+      <div class="text-center">
+        <img
+          src="https://images.unsplash.com/photo-1548585742-110f6e08f1aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt="Charles Bridge in Rom"
+        />
+        <div class="px-8 pt-8">
           <span>8.78K views - Rom, Italy</span>
         </div>
       </div>
 
-      <div>
-        <button>Free Download</button>
-        <button>
+      <div class="flex justify-center items-center gap-6 p-8">
+        <button
+          id="btn-download"
+          onclick="toggleDownload()"
+          class="text-lg border-2 px-4 py-1 rounded-full border-gray-800 bg-gray-800 text-gray-50 hover:bg-gray-500 hover:border-gray-500 hover:cursor-pointer font-semibold"
+        >
+          Free Download
+        </button>
+        <button
+          id="btn-share"
+          onclick="toggleShare()"
+          class="text-lg border-2 border-gray-800 px-4 py-1 rounded-full hover:bg-gray-500 hover:border-gray-500 hover:cursor-pointer hover:text-gray-50 flex items-center gap-4 font-semibold"
+        >
           Share
           <svg
             xmlns="http://www.w3.org/2000/svg"
